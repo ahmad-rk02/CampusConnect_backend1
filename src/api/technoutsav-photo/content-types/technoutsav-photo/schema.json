@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technoutsav_photos",
+  "info": {
+    "singularName": "technoutsav-photo",
+    "pluralName": "technoutsav-photos",
+    "displayName": "technoutsav_photo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

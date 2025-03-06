@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "abhirang_banners",
+  "info": {
+    "singularName": "abhirang-banner",
+    "pluralName": "abhirang-banners",
+    "displayName": "Abhirang_banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

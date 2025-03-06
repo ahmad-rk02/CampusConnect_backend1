@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "cse_hods",
+  "info": {
+    "singularName": "cse-hod",
+    "pluralName": "cse-hods",
+    "displayName": "cse_hod",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "qualification": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contact": {
+      "type": "string"
+    },
+    "education": {
+      "type": "string"
+    }
+  }
+}

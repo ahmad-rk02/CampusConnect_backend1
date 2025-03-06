@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gec_offices",
+  "info": {
+    "singularName": "gec-office",
+    "pluralName": "gec-offices",
+    "displayName": "gec_office",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "blocks"
+    },
+    "title": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

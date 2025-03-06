@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abhirang_photos",
+  "info": {
+    "singularName": "abhirang-photo",
+    "pluralName": "abhirang-photos",
+    "displayName": "Abhirang_photo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

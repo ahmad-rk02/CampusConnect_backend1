@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gcoec_events",
+  "info": {
+    "singularName": "gcoec-event",
+    "pluralName": "gcoec-events",
+    "displayName": "gcoec_event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "external_url": {
+      "type": "string",
+      "regex": "^https?:\\/\\/[^\\s$.?#].[^\\s]*$"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

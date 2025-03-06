@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "gug_coordinators",
+  "info": {
+    "singularName": "gug-coordinator",
+    "pluralName": "gug-coordinators",
+    "displayName": "gug_coordinator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "education": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contact": {
+      "type": "string"
+    }
+  }
+}

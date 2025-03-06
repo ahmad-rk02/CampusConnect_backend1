@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gcoec_news",
+  "info": {
+    "singularName": "gcoec-new",
+    "pluralName": "gcoec-news",
+    "displayName": "gcoec_new",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titile": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "external_url": {
+      "type": "string",
+      "regex": "^https?:\\/\\/[^\\s$.?#].[^\\s]*$"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "gec_principals",
+  "info": {
+    "singularName": "gec-principal",
+    "pluralName": "gec-principals",
+    "displayName": "gec_principal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "education": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contact": {
+      "type": "string"
+    }
+  }
+}

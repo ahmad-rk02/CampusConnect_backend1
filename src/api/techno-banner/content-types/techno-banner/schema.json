@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "techno_banners",
+  "info": {
+    "singularName": "techno-banner",
+    "pluralName": "techno-banners",
+    "displayName": "technoutsav_banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": false
+    }
+  }
+}
