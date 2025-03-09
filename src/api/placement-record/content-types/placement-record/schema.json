@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "placement_records",
+  "info": {
+    "singularName": "placement-record",
+    "pluralName": "placement-records",
+    "displayName": "placement-record",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "no_of_students_placed": {
+      "type": "integer"
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

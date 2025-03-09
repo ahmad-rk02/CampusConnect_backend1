@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_news",
+  "info": {
+    "singularName": "tpo-new",
+    "pluralName": "tpo-news",
+    "displayName": "tpo-new"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "decryption": {
+      "type": "blocks"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

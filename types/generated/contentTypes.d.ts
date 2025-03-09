@@ -905,6 +905,38 @@ export interface ApiMechanicalHodMechanicalHod extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPlacementRecordPlacementRecord
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'placement_records';
+  info: {
+    description: '';
+    displayName: 'placement-record';
+    pluralName: 'placement-records';
+    singularName: 'placement-record';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::placement-record.placement-record'
+    > &
+      Schema.Attribute.Private;
+    no_of_students_placed: Schema.Attribute.Integer;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    year: Schema.Attribute.String;
+  };
+}
+
 export interface ApiStudentSectionStudentSection
   extends Struct.CollectionTypeSchema {
   collectionName: 'student_sections';
@@ -1005,6 +1037,350 @@ export interface ApiTechnoutsavPhotoTechnoutsavPhoto
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     year: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiTpoActivityTpoActivity extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_activities';
+  info: {
+    description: '';
+    displayName: 'tpo-activity';
+    pluralName: 'tpo-activities';
+    singularName: 'tpo-activity';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-activity.tpo-activity'
+    > &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoBrochureTpoBrochure extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_brochures';
+  info: {
+    description: '';
+    displayName: 'tpo-brochure';
+    pluralName: 'tpo-brochures';
+    singularName: 'tpo-brochure';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-brochure.tpo-brochure'
+    > &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoDeskTpoDesk extends Struct.SingleTypeSchema {
+  collectionName: 'tpo_desks';
+  info: {
+    description: '';
+    displayName: 'tpo-desk';
+    pluralName: 'tpo-desks';
+    singularName: 'tpo-desk';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    designation: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-desk.tpo-desk'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.Integer;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoInternshipTpoInternship
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_internships';
+  info: {
+    description: '';
+    displayName: 'tpo-internship';
+    pluralName: 'tpo-internships';
+    singularName: 'tpo-internship';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    department: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-internship.tpo-internship'
+    > &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    students_completed: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoMouTpoMou extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_mous';
+  info: {
+    description: '';
+    displayName: 'tpo-mou';
+    pluralName: 'tpo-mous';
+    singularName: 'tpo-mou';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-mou.tpo-mou'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoNewTpoNew extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_news';
+  info: {
+    displayName: 'tpo-new';
+    pluralName: 'tpo-news';
+    singularName: 'tpo-new';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    decryption: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-new.tpo-new'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoNocTpoNoc extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_nocs';
+  info: {
+    description: '';
+    displayName: 'tpo-noc';
+    pluralName: 'tpo-nocs';
+    singularName: 'tpo-noc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-noc.tpo-noc'
+    > &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoPhotoGalleryTpoPhotoGallery
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_photo_galleries';
+  info: {
+    displayName: 'tpo-photo-gallery';
+    pluralName: 'tpo-photo-galleries';
+    singularName: 'tpo-photo-gallery';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-photo-gallery.tpo-photo-gallery'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoPlacementPolicyTpoPlacementPolicy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_placement_policies';
+  info: {
+    description: '';
+    displayName: 'tpo-placement-policy';
+    pluralName: 'tpo-placement-policies';
+    singularName: 'tpo-placement-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-placement-policy.tpo-placement-policy'
+    > &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoReportTpoReport extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_reports';
+  info: {
+    displayName: 'tpo-report';
+    pluralName: 'tpo-reports';
+    singularName: 'tpo-report';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-report.tpo-report'
+    > &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTrainingProgramTrainingProgram
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'training_programs';
+  info: {
+    description: '';
+    displayName: 'training-program';
+    pluralName: 'training-programs';
+    singularName: 'training-program';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    academic_year: Schema.Attribute.String;
+    beneficiary: Schema.Attribute.String;
+    components: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::training-program.training-program'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1533,9 +1909,21 @@ declare module '@strapi/strapi' {
       'api::gug-coordinator.gug-coordinator': ApiGugCoordinatorGugCoordinator;
       'api::instrumentation-hod.instrumentation-hod': ApiInstrumentationHodInstrumentationHod;
       'api::mechanical-hod.mechanical-hod': ApiMechanicalHodMechanicalHod;
+      'api::placement-record.placement-record': ApiPlacementRecordPlacementRecord;
       'api::student-section.student-section': ApiStudentSectionStudentSection;
       'api::techno-banner.techno-banner': ApiTechnoBannerTechnoBanner;
       'api::technoutsav-photo.technoutsav-photo': ApiTechnoutsavPhotoTechnoutsavPhoto;
+      'api::tpo-activity.tpo-activity': ApiTpoActivityTpoActivity;
+      'api::tpo-brochure.tpo-brochure': ApiTpoBrochureTpoBrochure;
+      'api::tpo-desk.tpo-desk': ApiTpoDeskTpoDesk;
+      'api::tpo-internship.tpo-internship': ApiTpoInternshipTpoInternship;
+      'api::tpo-mou.tpo-mou': ApiTpoMouTpoMou;
+      'api::tpo-new.tpo-new': ApiTpoNewTpoNew;
+      'api::tpo-noc.tpo-noc': ApiTpoNocTpoNoc;
+      'api::tpo-photo-gallery.tpo-photo-gallery': ApiTpoPhotoGalleryTpoPhotoGallery;
+      'api::tpo-placement-policy.tpo-placement-policy': ApiTpoPlacementPolicyTpoPlacementPolicy;
+      'api::tpo-report.tpo-report': ApiTpoReportTpoReport;
+      'api::training-program.training-program': ApiTrainingProgramTrainingProgram;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

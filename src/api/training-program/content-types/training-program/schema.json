@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_programs",
+  "info": {
+    "singularName": "training-program",
+    "pluralName": "training-programs",
+    "displayName": "training-program",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "academic_year": {
+      "type": "string"
+    },
+    "components": {
+      "type": "string"
+    },
+    "beneficiary": {
+      "type": "string"
+    }
+  }
+}

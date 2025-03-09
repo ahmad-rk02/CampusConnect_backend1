@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_internships",
+  "info": {
+    "singularName": "tpo-internship",
+    "pluralName": "tpo-internships",
+    "displayName": "tpo-internship",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "department": {
+      "type": "string"
+    },
+    "students_completed": {
+      "type": "integer"
+    },
+    "pdf": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_reports",
+  "info": {
+    "singularName": "tpo-report",
+    "pluralName": "tpo-reports",
+    "displayName": "tpo-report"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "pdf": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
