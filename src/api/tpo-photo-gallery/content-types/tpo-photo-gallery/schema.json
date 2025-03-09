@@ -4,23 +4,25 @@
   "info": {
     "singularName": "tpo-photo-gallery",
     "pluralName": "tpo-photo-galleries",
-    "displayName": "tpo-photo-gallery"
+    "displayName": "tpo-photo-gallery",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
-    "caption": {
+    "year": {
       "type": "string"
     }
   }

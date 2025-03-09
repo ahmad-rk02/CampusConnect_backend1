@@ -1199,6 +1199,7 @@ export interface ApiTpoMouTpoMou extends Struct.CollectionTypeSchema {
 export interface ApiTpoNewTpoNew extends Struct.CollectionTypeSchema {
   collectionName: 'tpo_news';
   info: {
+    description: '';
     displayName: 'tpo-new';
     pluralName: 'tpo-news';
     singularName: 'tpo-new';
@@ -1210,11 +1211,8 @@ export interface ApiTpoNewTpoNew extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    decryption: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1263,6 +1261,7 @@ export interface ApiTpoPhotoGalleryTpoPhotoGallery
   extends Struct.CollectionTypeSchema {
   collectionName: 'tpo_photo_galleries';
   info: {
+    description: '';
     displayName: 'tpo-photo-gallery';
     pluralName: 'tpo-photo-galleries';
     singularName: 'tpo-photo-gallery';
@@ -1271,7 +1270,6 @@ export interface ApiTpoPhotoGalleryTpoPhotoGallery
     draftAndPublish: true;
   };
   attributes: {
-    caption: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1289,6 +1287,7 @@ export interface ApiTpoPhotoGalleryTpoPhotoGallery
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    year: Schema.Attribute.String;
   };
 }
 
