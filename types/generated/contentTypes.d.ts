@@ -787,6 +787,7 @@ export interface ApiGecPrincipalGecPrincipal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
     education: Schema.Attribute.String;
     email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
