@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_photo_galleries",
+  "info": {
+    "singularName": "tpo-photo-gallery",
+    "pluralName": "tpo-photo-galleries",
+    "displayName": "tpo-photo-gallery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "year": {
+      "type": "string"
+    }
+  }
+}

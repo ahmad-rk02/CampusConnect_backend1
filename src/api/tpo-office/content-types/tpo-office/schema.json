@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_offices",
+  "info": {
+    "singularName": "tpo-office",
+    "pluralName": "tpo-offices",
+    "displayName": "tpo-office",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "office_name": {
+      "type": "string"
+    },
+    "room_details": {
+      "type": "string"
+    },
+    "institute_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "principal_email": {
+      "type": "email"
+    },
+    "tpo_email": {
+      "type": "email"
+    }
+  }
+}

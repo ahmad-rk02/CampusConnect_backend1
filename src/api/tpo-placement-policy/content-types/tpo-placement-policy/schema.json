@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_placement_policies",
+  "info": {
+    "singularName": "tpo-placement-policy",
+    "pluralName": "tpo-placement-policies",
+    "displayName": "tpo-placement-policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_nocs",
+  "info": {
+    "singularName": "tpo-noc",
+    "pluralName": "tpo-nocs",
+    "displayName": "tpo-noc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

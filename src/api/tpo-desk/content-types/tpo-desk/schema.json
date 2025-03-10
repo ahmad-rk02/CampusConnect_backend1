@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "tpo_desks",
+  "info": {
+    "singularName": "tpo-desk",
+    "pluralName": "tpo-desks",
+    "displayName": "tpo-desk",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "email": {
+      "type": "email"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "phone": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_mous",
+  "info": {
+    "singularName": "tpo-mou",
+    "pluralName": "tpo-mous",
+    "displayName": "tpo-mou",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    }
+  }
+}
