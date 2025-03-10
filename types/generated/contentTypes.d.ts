@@ -787,6 +787,7 @@ export interface ApiGecPrincipalGecPrincipal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
     education: Schema.Attribute.String;
     email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1257,6 +1258,42 @@ export interface ApiTpoNocTpoNoc extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTpoOfficeTpoOffice extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_offices';
+  info: {
+    description: '';
+    displayName: 'tpo-office';
+    pluralName: 'tpo-offices';
+    singularName: 'tpo-office';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fax: Schema.Attribute.String;
+    institute_name: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-office.tpo-office'
+    > &
+      Schema.Attribute.Private;
+    office_name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    principal_email: Schema.Attribute.Email;
+    publishedAt: Schema.Attribute.DateTime;
+    room_details: Schema.Attribute.String;
+    tpo_email: Schema.Attribute.Email;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    website: Schema.Attribute.String;
+  };
+}
+
 export interface ApiTpoPhotoGalleryTpoPhotoGallery
   extends Struct.CollectionTypeSchema {
   collectionName: 'tpo_photo_galleries';
@@ -1345,6 +1382,39 @@ export interface ApiTpoReportTpoReport extends Struct.CollectionTypeSchema {
     pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoStaffTpoStaff extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_staffs';
+  info: {
+    description: '';
+    displayName: 'tpo-staff';
+    pluralName: 'tpo-staffs';
+    singularName: 'tpo-staff';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    designation: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-staff.tpo-staff'
+    > &
+      Schema.Attribute.Private;
+    mobile: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1919,9 +1989,11 @@ declare module '@strapi/strapi' {
       'api::tpo-mou.tpo-mou': ApiTpoMouTpoMou;
       'api::tpo-new.tpo-new': ApiTpoNewTpoNew;
       'api::tpo-noc.tpo-noc': ApiTpoNocTpoNoc;
+      'api::tpo-office.tpo-office': ApiTpoOfficeTpoOffice;
       'api::tpo-photo-gallery.tpo-photo-gallery': ApiTpoPhotoGalleryTpoPhotoGallery;
       'api::tpo-placement-policy.tpo-placement-policy': ApiTpoPlacementPolicyTpoPlacementPolicy;
       'api::tpo-report.tpo-report': ApiTpoReportTpoReport;
+      'api::tpo-staff.tpo-staff': ApiTpoStaffTpoStaff;
       'api::training-program.training-program': ApiTrainingProgramTrainingProgram;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

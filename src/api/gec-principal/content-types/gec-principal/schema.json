@@ -33,6 +33,9 @@
     },
     "contact": {
       "type": "string"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }
