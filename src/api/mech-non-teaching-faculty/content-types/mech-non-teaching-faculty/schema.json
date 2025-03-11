@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mech_non_teaching_faculties",
+  "info": {
+    "singularName": "mech-non-teaching-faculty",
+    "pluralName": "mech-non-teaching-faculties",
+    "displayName": "mech-non-teaching-faculty",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "qualification": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

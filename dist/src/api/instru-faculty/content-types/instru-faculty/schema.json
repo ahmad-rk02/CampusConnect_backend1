@@ -1,10 +1,10 @@
 {
-    "kind": "singleType",
-    "collectionName": "instrumentation_hods",
+    "kind": "collectionType",
+    "collectionName": "instru_faculties",
     "info": {
-        "singularName": "instrumentation-hod",
-        "pluralName": "instrumentation-hods",
-        "displayName": "instrumentation_hod",
+        "singularName": "instru-faculty",
+        "pluralName": "instru-faculties",
+        "displayName": "instru-faculty",
         "description": ""
     },
     "options": {
@@ -14,11 +14,17 @@
         "name": {
             "type": "string"
         },
-        "contact": {
+        "designation": {
             "type": "string"
         },
-        "education": {
+        "experience": {
             "type": "string"
+        },
+        "qualification": {
+            "type": "string"
+        },
+        "details": {
+            "type": "text"
         },
         "email": {
             "type": "email"
@@ -33,18 +39,6 @@
                 "videos",
                 "audios"
             ]
-        },
-        "details": {
-            "type": "text"
-        },
-        "designation": {
-            "type": "string"
-        },
-        "qualification": {
-            "type": "string"
-        },
-        "experience": {
-            "type": "string"
         }
     }
 }
