@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "gec_contacts",
+  "info": {
+    "singularName": "gec-contact",
+    "pluralName": "gec-contacts",
+    "displayName": "gec-contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "address": {
+      "type": "text"
+    },
+    "principal_phone": {
+      "type": "string"
+    },
+    "admission_phone1": {
+      "type": "string"
+    },
+    "admission_phone2": {
+      "type": "string"
+    },
+    "office_phone": {
+      "type": "string"
+    },
+    "confidential_phone": {
+      "type": "string"
+    },
+    "principal_email": {
+      "type": "email"
+    },
+    "office_email": {
+      "type": "email"
+    }
+  }
+}
