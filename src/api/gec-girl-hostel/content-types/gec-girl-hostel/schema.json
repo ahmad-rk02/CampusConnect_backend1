@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gec_girl_hostels",
+  "info": {
+    "singularName": "gec-girl-hostel",
+    "pluralName": "gec-girl-hostels",
+    "displayName": "gec-girl-hostel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "sr_no": {
+      "type": "integer"
+    }
+  }
+}

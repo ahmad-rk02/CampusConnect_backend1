@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gec_boys_hostels",
+  "info": {
+    "singularName": "gec-boys-hostel",
+    "pluralName": "gec-boys-hostels",
+    "displayName": "gec-boys-hostel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "sr_no": {
+      "type": "integer"
+    }
+  }
+}
