@@ -4,7 +4,8 @@
     "info": {
         "singularName": "gec-announcement-bar",
         "pluralName": "gec-announcement-bars",
-        "displayName": "gec-announcement-bar"
+        "displayName": "gec-announcement-bar",
+        "description": ""
     },
     "options": {
         "draftAndPublish": true
@@ -13,15 +14,19 @@
         "title": {
             "type": "string"
         },
-        "link": {
+        "pdf": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
             "allowedTypes": [
                 "images",
                 "files",
                 "videos",
                 "audios"
-            ],
-            "type": "media",
-            "multiple": true
+            ]
+        },
+        "url": {
+            "type": "string"
         }
     }
 }
