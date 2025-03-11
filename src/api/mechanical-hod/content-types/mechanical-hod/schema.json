@@ -33,6 +33,18 @@
         "videos",
         "audios"
       ]
+    },
+    "experience": {
+      "type": "string"
+    },
+    "qualification": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "designation": {
+      "type": "string"
     }
   }
 }

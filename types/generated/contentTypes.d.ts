@@ -969,6 +969,107 @@ export interface ApiGugCoordinatorGugCoordinator
   };
 }
 
+export interface ApiInstruFacultyInstruFaculty
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'instru_faculties';
+  info: {
+    description: '';
+    displayName: 'instru-faculty';
+    pluralName: 'instru-faculties';
+    singularName: 'instru-faculty';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    details: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    experience: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::instru-faculty.instru-faculty'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    qualification: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiInstruNonTeachingFacultyInstruNonTeachingFaculty
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'instru_non_teaching_faculties';
+  info: {
+    description: '';
+    displayName: 'instru-non-teaching-faculty';
+    pluralName: 'instru-non-teaching-faculties';
+    singularName: 'instru-non-teaching-faculty';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    experience: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::instru-non-teaching-faculty.instru-non-teaching-faculty'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    qualification: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiInstruVisitingFacultyInstruVisitingFaculty
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'instru_visiting_faculties';
+  info: {
+    displayName: 'instru-visiting-faculty';
+    pluralName: 'instru-visiting-faculties';
+    singularName: 'instru-visiting-faculty';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::instru-visiting-faculty.instru-visiting-faculty'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiInstrumentationHodInstrumentationHod
   extends Struct.SingleTypeSchema {
   collectionName: 'instrumentation_hods';
@@ -986,8 +1087,11 @@ export interface ApiInstrumentationHodInstrumentationHod
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    details: Schema.Attribute.Text;
     education: Schema.Attribute.String;
     email: Schema.Attribute.Email;
+    experience: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -996,6 +1100,110 @@ export interface ApiInstrumentationHodInstrumentationHod
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    qualification: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMechFacultyMechFaculty extends Struct.CollectionTypeSchema {
+  collectionName: 'mech_faculties';
+  info: {
+    description: '';
+    displayName: 'mech-faculty';
+    pluralName: 'mech-faculties';
+    singularName: 'mech-faculty';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    details: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    experience: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mech-faculty.mech-faculty'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    qualification: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMechNonTeachingFacultyMechNonTeachingFaculty
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'mech_non_teaching_faculties';
+  info: {
+    description: '';
+    displayName: 'mech-non-teaching-faculty';
+    pluralName: 'mech-non-teaching-faculties';
+    singularName: 'mech-non-teaching-faculty';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    experience: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mech-non-teaching-faculty.mech-non-teaching-faculty'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    qualification: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMechVisitingFacultyMechVisitingFaculty
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'mech_visiting_faculties';
+  info: {
+    displayName: 'mech-visiting-faculty';
+    pluralName: 'mech-visiting-faculties';
+    singularName: 'mech-visiting-faculty';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mech-visiting-faculty.mech-visiting-faculty'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1019,8 +1227,11 @@ export interface ApiMechanicalHodMechanicalHod extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    designation: Schema.Attribute.String;
+    details: Schema.Attribute.Text;
     education: Schema.Attribute.String;
     email: Schema.Attribute.Email;
+    experience: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1030,6 +1241,7 @@ export interface ApiMechanicalHodMechanicalHod extends Struct.SingleTypeSchema {
     name: Schema.Attribute.String;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
+    qualification: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2143,7 +2355,13 @@ declare module '@strapi/strapi' {
       'api::gec-office.gec-office': ApiGecOfficeGecOffice;
       'api::gec-principal.gec-principal': ApiGecPrincipalGecPrincipal;
       'api::gug-coordinator.gug-coordinator': ApiGugCoordinatorGugCoordinator;
+      'api::instru-faculty.instru-faculty': ApiInstruFacultyInstruFaculty;
+      'api::instru-non-teaching-faculty.instru-non-teaching-faculty': ApiInstruNonTeachingFacultyInstruNonTeachingFaculty;
+      'api::instru-visiting-faculty.instru-visiting-faculty': ApiInstruVisitingFacultyInstruVisitingFaculty;
       'api::instrumentation-hod.instrumentation-hod': ApiInstrumentationHodInstrumentationHod;
+      'api::mech-faculty.mech-faculty': ApiMechFacultyMechFaculty;
+      'api::mech-non-teaching-faculty.mech-non-teaching-faculty': ApiMechNonTeachingFacultyMechNonTeachingFaculty;
+      'api::mech-visiting-faculty.mech-visiting-faculty': ApiMechVisitingFacultyMechVisitingFaculty;
       'api::mechanical-hod.mechanical-hod': ApiMechanicalHodMechanicalHod;
       'api::placement-record.placement-record': ApiPlacementRecordPlacementRecord;
       'api::student-section.student-section': ApiStudentSectionStudentSection;
