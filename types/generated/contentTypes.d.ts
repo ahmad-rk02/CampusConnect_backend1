@@ -769,6 +769,75 @@ export interface ApiGcoecNewGcoecNew extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGecAnnouncementBarGecAnnouncementBar
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'gec_announcement_bars';
+  info: {
+    displayName: 'gec-announcement-bar';
+    pluralName: 'gec-announcement-bars';
+    singularName: 'gec-announcement-bar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    link: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gec-announcement-bar.gec-announcement-bar'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGecContactGecContact extends Struct.SingleTypeSchema {
+  collectionName: 'gec_contacts';
+  info: {
+    description: '';
+    displayName: 'gec-contact';
+    pluralName: 'gec-contacts';
+    singularName: 'gec-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Schema.Attribute.Text;
+    admission_phone1: Schema.Attribute.String;
+    admission_phone2: Schema.Attribute.String;
+    confidential_phone: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gec-contact.gec-contact'
+    > &
+      Schema.Attribute.Private;
+    office_email: Schema.Attribute.Email;
+    office_phone: Schema.Attribute.String;
+    principal_email: Schema.Attribute.Email;
+    principal_phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGecOfficeGecOffice extends Struct.CollectionTypeSchema {
   collectionName: 'gec_offices';
   info: {
@@ -1164,6 +1233,39 @@ export interface ApiTpoDeskTpoDesk extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTpoFeedbackTpoFeedback extends Struct.CollectionTypeSchema {
+  collectionName: 'tpo_feedbacks';
+  info: {
+    description: '';
+    displayName: 'tpo-feedback';
+    pluralName: 'tpo-feedbacks';
+    singularName: 'tpo-feedback';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    department: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tpo-feedback.tpo-feedback'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    prn: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    year: Schema.Attribute.String;
   };
 }
 
@@ -2006,6 +2108,8 @@ declare module '@strapi/strapi' {
       'api::feedback-tpo.feedback-tpo': ApiFeedbackTpoFeedbackTpo;
       'api::gcoec-event.gcoec-event': ApiGcoecEventGcoecEvent;
       'api::gcoec-new.gcoec-new': ApiGcoecNewGcoecNew;
+      'api::gec-announcement-bar.gec-announcement-bar': ApiGecAnnouncementBarGecAnnouncementBar;
+      'api::gec-contact.gec-contact': ApiGecContactGecContact;
       'api::gec-office.gec-office': ApiGecOfficeGecOffice;
       'api::gec-principal.gec-principal': ApiGecPrincipalGecPrincipal;
       'api::gug-coordinator.gug-coordinator': ApiGugCoordinatorGugCoordinator;
@@ -2018,6 +2122,7 @@ declare module '@strapi/strapi' {
       'api::tpo-activity.tpo-activity': ApiTpoActivityTpoActivity;
       'api::tpo-brochure.tpo-brochure': ApiTpoBrochureTpoBrochure;
       'api::tpo-desk.tpo-desk': ApiTpoDeskTpoDesk;
+      'api::tpo-feedback.tpo-feedback': ApiTpoFeedbackTpoFeedback;
       'api::tpo-internship.tpo-internship': ApiTpoInternshipTpoInternship;
       'api::tpo-mou.tpo-mou': ApiTpoMouTpoMou;
       'api::tpo-new.tpo-new': ApiTpoNewTpoNew;

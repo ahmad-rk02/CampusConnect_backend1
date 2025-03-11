@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tpo_feedbacks",
+  "info": {
+    "singularName": "tpo-feedback",
+    "pluralName": "tpo-feedbacks",
+    "displayName": "tpo-feedback",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "prn": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

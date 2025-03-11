@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gec_announcement_bars",
+  "info": {
+    "singularName": "gec-announcement-bar",
+    "pluralName": "gec-announcement-bars",
+    "displayName": "gec-announcement-bar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
