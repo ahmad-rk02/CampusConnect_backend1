@@ -673,38 +673,6 @@ export interface ApiEntcHodEntcHod extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiFeedbackTpoFeedbackTpo extends Struct.CollectionTypeSchema {
-  collectionName: 'feedback_tpos';
-  info: {
-    description: '';
-    displayName: 'feedback_tpo';
-    pluralName: 'feedback-tpos';
-    singularName: 'feedback-tpo';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    department: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::feedback-tpo.feedback-tpo'
-    > &
-      Schema.Attribute.Private;
-    Message: Schema.Attribute.Blocks;
-    Name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    semester: Schema.Attribute.Integer;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiGcoecEventGcoecEvent extends Struct.CollectionTypeSchema {
   collectionName: 'gcoec_events';
   info: {
@@ -773,6 +741,7 @@ export interface ApiGecAnnouncementBarGecAnnouncementBar
   extends Struct.CollectionTypeSchema {
   collectionName: 'gec_announcement_bars';
   info: {
+    description: '';
     displayName: 'gec-announcement-bar';
     pluralName: 'gec-announcement-bars';
     singularName: 'gec-announcement-bar';
@@ -784,21 +753,19 @@ export interface ApiGecAnnouncementBarGecAnnouncementBar
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    link: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::gec-announcement-bar.gec-announcement-bar'
     > &
       Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -2105,7 +2072,6 @@ declare module '@strapi/strapi' {
       'api::cse-visiting-faculty.cse-visiting-faculty': ApiCseVisitingFacultyCseVisitingFaculty;
       'api::electrical-hod.electrical-hod': ApiElectricalHodElectricalHod;
       'api::entc-hod.entc-hod': ApiEntcHodEntcHod;
-      'api::feedback-tpo.feedback-tpo': ApiFeedbackTpoFeedbackTpo;
       'api::gcoec-event.gcoec-event': ApiGcoecEventGcoecEvent;
       'api::gcoec-new.gcoec-new': ApiGcoecNewGcoecNew;
       'api::gec-announcement-bar.gec-announcement-bar': ApiGecAnnouncementBarGecAnnouncementBar;
