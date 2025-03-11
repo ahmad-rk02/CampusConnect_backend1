@@ -1158,7 +1158,7 @@ export interface ApiTpoDeskTpoDesk extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    phone: Schema.Attribute.Integer;
+    phone: Schema.Attribute.BigInteger;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
