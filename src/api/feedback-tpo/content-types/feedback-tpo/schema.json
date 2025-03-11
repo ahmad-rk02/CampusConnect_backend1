@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback_tpos",
+  "info": {
+    "singularName": "feedback-tpo",
+    "pluralName": "feedback-tpos",
+    "displayName": "feedback_tpo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "blocks"
+    },
+    "department": {
+      "type": "string"
+    },
+    "semester": {
+      "type": "integer"
+    }
+  }
+}
