@@ -769,6 +769,37 @@ export interface ApiGecAnnouncementBarGecAnnouncementBar
   };
 }
 
+export interface ApiGecBoysHostelGecBoysHostel
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'gec_boys_hostels';
+  info: {
+    displayName: 'gec-boys-hostel';
+    pluralName: 'gec-boys-hostels';
+    singularName: 'gec-boys-hostel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gec-boys-hostel.gec-boys-hostel'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String;
+    sr_no: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGecContactGecContact extends Struct.SingleTypeSchema {
   collectionName: 'gec_contacts';
   info: {
@@ -799,6 +830,37 @@ export interface ApiGecContactGecContact extends Struct.SingleTypeSchema {
     principal_email: Schema.Attribute.Email;
     principal_phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGecGirlHostelGecGirlHostel
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'gec_girl_hostels';
+  info: {
+    displayName: 'gec-girl-hostel';
+    pluralName: 'gec-girl-hostels';
+    singularName: 'gec-girl-hostel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gec-girl-hostel.gec-girl-hostel'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String;
+    sr_no: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2290,7 +2352,9 @@ declare module '@strapi/strapi' {
       'api::gcoec-event.gcoec-event': ApiGcoecEventGcoecEvent;
       'api::gcoec-new.gcoec-new': ApiGcoecNewGcoecNew;
       'api::gec-announcement-bar.gec-announcement-bar': ApiGecAnnouncementBarGecAnnouncementBar;
+      'api::gec-boys-hostel.gec-boys-hostel': ApiGecBoysHostelGecBoysHostel;
       'api::gec-contact.gec-contact': ApiGecContactGecContact;
+      'api::gec-girl-hostel.gec-girl-hostel': ApiGecGirlHostelGecGirlHostel;
       'api::gec-office.gec-office': ApiGecOfficeGecOffice;
       'api::gec-principal.gec-principal': ApiGecPrincipalGecPrincipal;
       'api::gug-coordinator.gug-coordinator': ApiGugCoordinatorGugCoordinator;
