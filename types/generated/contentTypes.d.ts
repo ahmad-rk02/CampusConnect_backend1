@@ -1031,7 +1031,10 @@ export interface ApiInstruNonTeachingFacultyInstruNonTeachingFaculty
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    photo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
     qualification: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
