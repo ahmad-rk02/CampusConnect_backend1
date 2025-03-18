@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elect_non_teaching_faculties",
+  "info": {
+    "singularName": "elect-non-teaching-faculty",
+    "pluralName": "elect-non-teaching-faculties",
+    "displayName": "elect-non-teaching-faculty",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "qualification": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

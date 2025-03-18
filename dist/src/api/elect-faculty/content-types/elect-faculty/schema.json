@@ -1,24 +1,30 @@
 {
-    "kind": "singleType",
-    "collectionName": "electrical_hods",
+    "kind": "collectionType",
+    "collectionName": "elect_faculties",
     "info": {
-        "singularName": "electrical-hod",
-        "pluralName": "electrical-hods",
-        "displayName": "electrical_hod",
+        "singularName": "elect-faculty",
+        "pluralName": "elect-faculties",
+        "displayName": "elect-faculty",
         "description": ""
     },
     "options": {
         "draftAndPublish": true
     },
     "attributes": {
-        "name": {
+        "Name": {
             "type": "string"
         },
-        "education": {
+        "experience": {
             "type": "string"
         },
-        "contact": {
+        "qualification": {
             "type": "string"
+        },
+        "details": {
+            "type": "string"
+        },
+        "email": {
+            "type": "email"
         },
         "photo": {
             "type": "media",
@@ -31,19 +37,7 @@
                 "audios"
             ]
         },
-        "email": {
-            "type": "email"
-        },
-        "qualification": {
-            "type": "string"
-        },
         "designation": {
-            "type": "string"
-        },
-        "details": {
-            "type": "text"
-        },
-        "experience": {
             "type": "string"
         }
     }

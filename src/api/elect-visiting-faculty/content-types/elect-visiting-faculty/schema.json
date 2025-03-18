@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elect_visiting_faculties",
+  "info": {
+    "singularName": "elect-visiting-faculty",
+    "pluralName": "elect-visiting-faculties",
+    "displayName": "elect-visiting-faculty"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    }
+  }
+}
