@@ -5,6 +5,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
+      enabled: true,
       origin: "*", // Allow React frontend
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization"],
